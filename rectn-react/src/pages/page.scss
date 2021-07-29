@@ -1,0 +1,264 @@
+.container {
+  margin: 0 auto;
+  padding: 2rem 3.5rem;
+  max-width: 600px;
+
+  color: lightblue;
+
+  .alert {
+    margin: 1rem 0;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    line-height: 1.25rem;
+    border-radius: 0.1rem;
+    color: #007bff;
+    background-color: #0c0c21;
+    width: fit-content;
+  }
+
+  .search-msg {
+    font-size: 0.9rem;
+  }
+
+  form {
+    margin-top: 2rem;
+  }
+
+  .content {
+    padding: 1rem 0;
+
+    .poster {
+      margin: 1.5rem 0 0.5rem !important;
+      border-radius: 0.2rem;
+      max-width: 250px !important;
+      margin: 0 auto;
+    }
+
+    .movie_data {
+      div {
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+
+        label {
+          display: inline-block;
+          margin: 0;
+          margin-right: 0.25rem;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .genre-item {
+      margin: 1rem 0;
+      div {
+        display: inline-block;
+        cursor: pointer;
+      }
+      .icon {
+        transform: translateY(2.5px);
+        margin-right: 0.6rem;
+      }
+    }
+  }
+
+  .go-back {
+    img {
+      height: 25px !important;
+      transform: translate(-10px, 4px);
+      padding-right: 0.75rem;
+    }
+  }
+
+  label,
+  input,
+  button {
+    display: block;
+    margin: 1rem 0rem;
+    font-size: 1rem;
+    border-radius: 0.1rem;
+    font-family: Montserrat-SemiBold;
+  }
+
+  input {
+    font-size: 0.9rem;
+    width: 75%;
+    padding: 0.75rem;
+  }
+
+  button {
+    margin-top: 2rem;
+    padding: 0.5rem 0.75rem;
+    &:hover {
+      background-color: #007bff;
+    }
+  }
+
+  .error {
+    color: red;
+    font-size: 0.9rem;
+  }
+
+  &.profile {
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    .btns {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      flex-direction: row;
+      gap: 0.5rem;
+
+      button {
+        margin: 0 !important;
+        &.delete-btn {
+          &:hover {
+            background-color: #f57070;
+          }
+        }
+      }
+    }
+  }
+
+  .heart-media {
+    cursor: pointer;
+    padding: 1rem 0;
+    line-height: 1.3rem;
+    svg {
+      margin-right: 0.5rem;
+      transform: translateY(0.1rem);
+    }
+  }
+
+  .underlined {
+    color: #ffc457;
+    text-decoration: underline;
+  }
+
+  .input-btn-search {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+
+    * {
+      margin: 0;
+    }
+
+    input {
+      flex: 9;
+    }
+
+    button {
+      flex: 1;
+    }
+
+    svg {
+      position: relative;
+      top: 0.15rem;
+    }
+  }
+
+  .single-media-title {
+    margin-top: -1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .similar-medias {
+    &.some-px {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    margin-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    h3 {
+      // text-transform: uppercase;  // capitalize
+      margin-bottom: 0.75rem;
+    }
+
+    .single-similar-media {
+      text-decoration: none;
+      color: inherit;
+      width: 90%;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      background-color: #02020faa;
+      border: 0.1rem solid rgba(84, 96, 99, 0.438) !important;
+      padding: 0.3rem 0.2rem;
+      border-radius: 0.1rem;
+      gap: 0.3rem;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background-color: #116ed1ee;
+      }
+
+      img {
+        position: relative;
+        left: 0;
+        top: 0;
+        height: 5rem;
+        object-fit: cover;
+        border-radius: 0.1rem;
+        width: 100%;
+      }
+
+      .img_paragraphs {
+        position: absolute;
+        text-align: center;
+        background-color: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+        padding: 0.5rem;
+        border-radius: 0.1rem;
+        transition: background 100ms;
+        max-width: 50%;
+
+        &:hover {
+          background-color: inherit;
+        }
+
+        p:first-child {
+          position: relative;
+          font-size: 0.9rem;
+        }
+
+        p:last-child {
+          position: relative;
+          font-size: 0.75rem;
+          color: #ffffff99;
+        }
+      }
+    }
+  }
+}
+
+/* Phones */
+@media all and (max-width: 500px) {
+  .container {
+    padding: 2.5rem 1.5rem;
+
+    input,
+    button {
+      width: 100% !important;
+    }
+
+    &.profile {
+      .btns {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+
+    .similar-medias .single-similar-media img {
+      height: 6rem;
+    }
+  }
+}

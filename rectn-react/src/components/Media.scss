@@ -1,0 +1,126 @@
+.media {
+  padding-top: 1.5rem;
+
+  --color1: #3fa9b1;
+  --color2: #ff7800;
+  --color3: #f5f5f5;
+  --color4: #ffc457;
+  --color5: #02020f;
+  --color6: #ffffff;
+  --color7: #000000;
+  --color8: #0c0c21;
+  --color9: #007bff;
+  --color9-alt: #7f05d1;
+  --color10: #ebedee;
+  --color9-50: #007bff50;
+  --color11-aa: #0c0c21aa;
+
+  width: 95%;
+  margin: 3rem auto;
+  color: var(--color2);
+
+  > h2 {
+    font-size: 2rem;
+  }
+
+  > ul {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem 0 1.5rem;
+    gap: 0.5rem;
+
+    li {
+      font-size: 0.9rem;
+      padding: 0.25rem 1rem;
+      color: var(--color9-alt);
+      border: 0.15rem solid var(--color5);
+      transition: color 300ms;
+
+      &:hover {
+        color: var(--color9);
+      }
+
+      &.selected {
+        color: var(--color9);
+        transition: border 500ms ease-out;
+        border-left: 0.15rem solid var(--color9);
+      }
+    }
+  }
+
+  > hr {
+    margin: -0.25rem auto;
+    border: 1px solid var(--color11-aa);
+  }
+
+  button {
+    display: block;
+    color: var(--color6);
+    box-shadow: rgba(57, 78, 104, 0.4) 0px 0px 0px 2px,
+      rgba(6, 24, 44, 0.65) 0px 4px 8px -1px,
+      rgba(253, 253, 253, 0.18) 0px 1px 0px inset;
+    background-color: unset;
+    padding: 0.75rem 1.5rem;
+    margin: 4rem auto;
+
+    &:hover {
+      background-color: var(--color9);
+    }
+
+    img {
+      margin: 0.3rem 0 -0.1rem 0.4rem;
+      width: 10px;
+    }
+  }
+
+  .pagination {
+    margin: 4rem auto;
+    display: flex;
+    justify-content: center;
+
+    &.without-bottom-padding {
+      margin-bottom: -1rem;
+    }
+
+    button {
+      margin: 0;
+    }
+
+    .disabled-btn {
+      background-color: inherit;
+      cursor: unset;
+      // cursor: not-allowed;
+    }
+
+    .txt {
+      background-color: inherit;
+      cursor: unset;
+      box-shadow: none;
+      width: 6.75rem;
+    }
+  }
+}
+
+@media all and (min-width: 820px) {
+  .media {
+    > ul {
+      flex-direction: row;
+      gap: 1rem;
+      padding: 1.5rem 0;
+
+      li {
+        font-size: 0.9rem;
+        padding: 1rem 1rem;
+
+        &.selected {
+          border-left: none;
+          border-bottom: 0.15rem solid var(--color9);
+        }
+      }
+    }
+
+    > hr {
+      margin: -1.5rem auto;
+    }
+  }
+}

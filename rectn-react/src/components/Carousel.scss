@@ -1,0 +1,160 @@
+.carousel {
+  --color1: #3fa9b1;
+  --color2: #ff7800;
+  --color3: #f5f5f5;
+  --color4: #ffc457;
+  --color5: #02020f;
+  --color6: #ffffff;
+  --color7: #000000;
+  --color8: #0c0c21;
+  --color9: #007bff;
+  --color10: #ebedee;
+  --color9-50: #007bff50;
+  --color11-aa: #0c0c21aa;
+
+  display: flex;
+
+  img:first-child {
+    width: 100%;
+    min-height: 250px;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(90%);
+    // filter: blur(1px);
+    // filter: blur(1px) brightness(75%);
+  }
+
+  .overlay {
+    position: absolute;
+    display: block;
+    width: 100%;
+    min-height: 250px;
+    max-height: 500px;
+    filter: brightness(50%);
+    // display: none;
+    // filter: blur(1px);
+  }
+
+  .previous,
+  .next {
+    cursor: pointer;
+    width: 30px;
+    object-fit: contain;
+    align-self: center;
+    justify-self: stretch;
+    position: absolute;
+    background-color: var(--color9-50);
+    z-index: 1;
+
+    &:hover {
+      background-color: var(--color9);
+      box-shadow: rgba(57, 78, 104, 0.4) 0px 0px 0px 2px,
+        rgba(6, 24, 44, 0.65) 0px 4px 8px -1px,
+        rgba(253, 253, 253, 0.18) 0px 1px 0px inset;
+    }
+  }
+
+  .previous {
+    left: 5%;
+  }
+
+  .next {
+    right: 5%;
+  }
+
+  .loading {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    align-self: center;
+    justify-self: stretch;
+    position: absolute;
+    display: block;
+    font-family: Montserrat-Regular;
+
+    > div {
+      border-radius: .2rem;
+      position: static;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 2rem 1rem;
+      width: 60%;
+      margin: 0 auto;
+      max-width: 950px;
+      font-size: 0.9rem;
+      background-color: var(--color11-aa);
+      box-shadow: rgba(57, 78, 104, 0.4) 0px 0px 0px 2px,
+        rgba(6, 24, 44, 0.65) 0px 4px 8px -1px,
+        rgba(253, 253, 253, 0.18) 0px 1px 0px inset;
+
+      h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      strong,
+      h4 {
+        font-family: Montserrat-Regular;
+        font-size: 0.8rem;
+      }
+
+      p {
+        display: none;
+      }
+
+      button {
+        background-color: unset;
+        color: var(--color6);
+        border: 0.1rem solid var(--color10);
+        padding: 0.6rem 1rem;
+        margin-top: 0.75rem;
+        width: fit-content;
+        &:hover {
+          border-color: var(--color9);
+          background-color: var(--color9);
+        }
+      }
+    }
+  }
+}
+
+/* Laptops */
+@media all and (min-width: 820px) {
+  .carousel {
+    .previous,
+    .next {
+      width: 40px;
+    }
+
+    .content {
+      > div {
+        width: 75%;
+        
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: 0.75rem;
+        }
+
+        strong,
+        h4 {
+          font-family: Montserrat-Regular;
+          font-size: 1rem;
+        }
+
+        p {
+          display: initial;
+        }
+      }
+    }
+  }
+}
