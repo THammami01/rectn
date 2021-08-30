@@ -1,4 +1,4 @@
-# TSI (Version 2.0.0)
+# RECTN
 
 Click [here](https://rectn.herokuapp.com/) to view the app.
 
