@@ -1,6 +1,7 @@
 # RECTN
 
-Click [here](https://rectn.herokuapp.com/) to view the app.
+Click [here](https://rectn.herokuapp.com/) to view the app.<br/>
+Note: App is inaccessible because Heroku no longer offers a free tier. I will publish it somewhere else soon.
 
 ## Desktop View (Full Screenshot)
 
